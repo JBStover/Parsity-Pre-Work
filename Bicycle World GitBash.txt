@@ -1,0 +1,42 @@
+$ pwd
+/home/ccuser/workspace/bicycle-world-ii
+$ ls
+brands.txt  freight  mountain  racing
+$ cd freight
+$ ls
+messenger  porteur
+$ cd porteur
+$ ls
+$ cd ..
+$ ls
+messenger  porteur
+$ pwd
+/home/ccuser/workspace/bicycle-world-ii/freight
+$ cd ..
+$ pwd
+/home/ccuser/workspace/bicycle-world-ii
+$ ls
+brands.txt  freight  mountain  racing
+$ cd mountain/downhill
+$ pwd
+/home/ccuser/workspace/bicycle-world-ii/mountain/downhill
+$ touch dirt.txt
+$ touch mud.txt
+$ ls
+dirt.txt  heavyweight  lightweight  mud.txt
+$ mkdir safety
+$ ls
+dirt.txt  heavyweight  lightweight  mud.txt  safety
+$ cd ..
+$ cd ..
+$ pwd
+/home/ccuser/workspace/bicycle-world-ii
+$ ls
+brands.txt  freight  mountain  racing
+$ mkdir bmx
+$ pwd
+/home/ccuser/workspace/bicycle-world-ii
+$ touch bmx/tricks.txt
+$ ls
+bmx  brands.txt  freight  mountain  racing
+$ 

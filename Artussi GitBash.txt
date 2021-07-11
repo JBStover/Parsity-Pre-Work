@@ -1,0 +1,99 @@
+$ pwd
+/home/ccuser/workspace/artusi
+$ ls a
+ls: cannot access 'a': No such file or directory
+$ ls -a
+.  ..  drawing  painting  sculpting
+$ ls -l
+total 0
+drwxr-xr-x 4 ccuser ccuser 37 Mar  5  2016 drawing
+drwxr-xr-x 4 ccuser ccuser 34 Mar  5  2016 painting
+drwxr-xr-x 3 ccuser ccuser 18 Mar  5  2016 sculpting
+$ ls -t
+drawing  painting  sculpting
+$ ls -l-t
+ls: invalid option -- '-'
+Try 'ls --help' for more information.
+$ ls -l -t
+total 0
+drwxr-xr-x 4 ccuser ccuser 37 Mar  5  2016 drawing
+drwxr-xr-x 4 ccuser ccuser 34 Mar  5  2016 painting
+drwxr-xr-x 3 ccuser ccuser 18 Mar  5  2016 sculpting
+$ pwd
+/home/ccuser/workspace/artusi
+$ ls
+drawing  painting  sculpting
+$ cd drawing/pencils
+$ ls -a
+.  ..  color.txt  graphite.txt
+$ cp color.txt graphite.txt
+$ ls
+color.txt  graphite.txt
+$ pwd
+/home/ccuser/workspace/artusi/drawing/pencils
+$ cd ..
+$ ls
+charcoal  pencils
+$ cd charcoal
+$ cp compressed.txt vine.txt
+$ cp vine.txt drawing/pencils/color.txt
+cp: cannot create regular file 'drawing/pencils/color.txt': No such file or directory
+$ cp vine.txt ../pencils/color.txt
+$ cd ../../painting/
+$ pwd
+/home/ccuser/workspace/artusi/painting
+$ ls -a -t -l
+total 0
+drwxr-xr-x 2 ccuser ccuser 69 Jul 11 14:50 brushes
+drwxr-xr-x 5 ccuser ccuser 54 Jul 11 14:50 ..
+drwxr-xr-x 4 ccuser ccuser 34 Mar  5  2016 .
+drwxr-xr-x 4 ccuser ccuser 40 Mar  5  2016 paint
+$ cd brushes/
+$ ls -a -t -l
+total 16
+drwxr-xr-x 2 ccuser ccuser  69 Jul 11 14:50 .
+-rw-r--r-- 1 ccuser ccuser  59 Jul 11 14:50 fan.txt
+-rw-r--r-- 1 ccuser ccuser 133 Jul 11 14:50 flat.txt
+-rw-r--r-- 1 ccuser ccuser 199 Jul 11 14:50 mop.txt
+-rw-r--r-- 1 ccuser ccuser  75 Jul 11 14:50 round.txt
+drwxr-xr-x 4 ccuser ccuser  34 Mar  5  2016 ..
+$ cd *f ../paint/
+bash: cd: *f: No such file or directory
+$ ls ../paint/
+acryllic  watercolor
+$ .s -a -t -l ../paint/
+bash: .s: command not found
+$ ls -a -t -l ../paint/
+total 0
+drwxr-xr-x 2 ccuser ccuser 40 Jul 11 14:50 watercolor
+drwxr-xr-x 2 ccuser ccuser 45 Jul 11 14:50 acryllic
+drwxr-xr-x 4 ccuser ccuser 40 Mar  5  2016 .
+drwxr-xr-x 4 ccuser ccuser 34 Mar  5  2016 ..
+$ cp f*.txt ../paint/
+$ ls ../paint/
+acryllic  fan.txt  flat.txt  watercolor
+$ cd ../../sculpting/
+$ ls -a -l -t
+total 0
+drwxr-xr-x 5 ccuser ccuser 54 Jul 11 14:50 ..
+drwxr-xr-x 3 ccuser ccuser 18 Mar  5  2016 .
+drwxr-xr-x 5 ccuser ccuser 49 Mar  5  2016 clay
+$ cd clay/polymer/
+$ mv airdry.txt ../ceramic/
+$ cd ../ceramic/
+$ ls -l -a -t
+total 0
+drwxr-xr-x 2 ccuser ccuser 68 Jul 11 15:00 .
+-rw-r--r-- 1 ccuser ccuser  0 Jul 11 14:50 airdry.txt
+-rw-r--r-- 1 ccuser ccuser  0 Jul 11 14:50 earthenware.txt
+-rw-r--r-- 1 ccuser ccuser  0 Jul 11 14:50 stoneware.txt
+drwxr-xr-x 5 ccuser ccuser 49 Mar  5  2016 ..
+$ rm earthenware.txt
+$ cd ..
+$ ls
+ceramic  dough  polymer
+$ rm -r dough/
+$ cd ../..
+$ pwd
+/home/ccuser/workspace/artusi
+$ 

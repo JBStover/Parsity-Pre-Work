@@ -1,0 +1,89 @@
+$ git init
+Initialized empty Git repository in /home/ccuser/workspace/manhattan-zoo-1/.git/
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        meal-regimens.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git add meal-regimens.txt
+$ git commit -m "First commit of meal regimens text"
+[master (root-commit) 298fef1] First commit of meal regimens text
+ 1 file changed, 14 insertions(+)
+ create mode 100644 meal-regimens.txt
+$ git add meal-regimens.txt
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   meal-regimens.txt
+
+$ git commit -m "Second commit with mods"
+[master d91d35c] Second commit with mods
+ 1 file changed, 5 insertions(+)
+$ git log
+commit d91d35cb0d875ee319e6a2ac16d52dba481f0a6d
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun Jul 11 13:56:20 2021 +0000
+
+    Second commit with mods
+
+commit 298fef12ecca8ebdfbba503c22b91e96d0206fd4
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun Jul 11 13:54:57 2021 +0000
+
+    First commit of meal regimens text
+$ git add meal-regimens.txt
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   meal-regimens.txt
+
+$ git commit -m "Dart Frog addition"
+[master 7ce46e3] Dart Frog addition
+ 1 file changed, 5 insertions(+)
+$ git status
+On branch master
+nothing to commit, working directory clean
+$ git add meal-regimens.txt
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   meal-regimens.txt
+
+$ git commit -m "Gorilla addition"
+[master d0ccf6c] Gorilla addition
+ 1 file changed, 5 insertions(+)
+$ git status
+On branch master
+nothing to commit, working directory clean
+$ git log
+commit d0ccf6c86da3aa057bfa7651924cb8c7676b856d
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun Jul 11 13:58:19 2021 +0000
+
+    Gorilla addition
+
+commit 7ce46e31c4985d1fb9420c689b8985c1da32b63c
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun Jul 11 13:57:27 2021 +0000
+
+    Dart Frog addition
+
+commit d91d35cb0d875ee319e6a2ac16d52dba481f0a6d
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun Jul 11 13:56:20 2021 +0000
+
+    Second commit with mods
+
+:

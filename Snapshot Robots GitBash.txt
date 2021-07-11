@@ -1,0 +1,93 @@
+$ git init
+Initialized empty Git repository in /home/ccuser/workspace/snapfit-robots/.git/
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        disclaimer.txt
+        instructions.txt
+        warranty.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git add disclaimer.txt
+$ git add instructions.txt
+$ git add warranty.txt
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   disclaimer.txt
+        new file:   instructions.txt
+        new file:   warranty.txt
+
+$ git commit -m "First commit of three files"
+[master (root-commit) b7ea4ad] First commit of three files
+ 3 files changed, 70 insertions(+)
+ create mode 100644 disclaimer.txt
+ create mode 100644 instructions.txt
+ create mode 100644 warranty.txt
+$ git log
+commit b7ea4adbbe02f92b50130e757e46482b4cc10281
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun Jul 11 14:01:07 2021 +0000
+
+    First commit of three files
+$ git add disclaimer.txt
+$ git commit -m "Disclaimer with warning"
+[master 6b55d99] Disclaimer with warning
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git log
+commit 6b55d9983fdf9e3feb3e350d01f6993b56f0314b
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun Jul 11 14:01:57 2021 +0000
+
+    Disclaimer with warning
+
+commit b7ea4adbbe02f92b50130e757e46482b4cc10281
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun Jul 11 14:01:07 2021 +0000
+
+    First commit of three files
+$ git add instructions.txt
+$ git add warranty.txt
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   instructions.txt
+        modified:   warranty.txt
+
+$ git commit -m"Trustworty update"
+[master a094061] Trustworty update
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+$ git status
+On branch master
+nothing to commit, working directory clean
+$ git log
+commit a094061bba65d4b1a1fd5534d9b51bfab52822c3
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun Jul 11 14:04:41 2021 +0000
+
+    Trustworty update
+
+commit 6b55d9983fdf9e3feb3e350d01f6993b56f0314b
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun Jul 11 14:01:57 2021 +0000
+
+    Disclaimer with warning
+
+commit b7ea4adbbe02f92b50130e757e46482b4cc10281
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun Jul 11 14:01:07 2021 +0000
+
+    First commit of three files
+$ 
